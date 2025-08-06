@@ -1,0 +1,629 @@
+/* Mobile Navbar */
+.mobile-navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--sidebar-bg);
+    color: var(--text-primary);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: var(--shadow-light);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1001;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode mobile navbar */
+@media (prefers-color-scheme: dark) {
+    .mobile-navbar {
+        background: var(--sidebar-bg);
+        color: var(--text-primary);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-light);
+    }
+}
+
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    background: var(--accent-color-light);
+}
+
+/* Dark mode mobile menu button */
+@media (prefers-color-scheme: dark) {
+    .mobile-menu-btn {
+        color: var(--accent-color);
+    }
+
+    .mobile-menu-btn:hover {
+        background: var(--accent-color-light);
+    }
+}
+
+.mobile-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1976d2;
+    font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+}
+
+/* Dark mode mobile logo */
+@media (prefers-color-scheme: dark) {
+    .mobile-logo {
+        color: #90caf9;
+    }
+}
+
+.mobile-profile {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #1976d2;
+}
+
+/* Dark mode mobile avatar */
+@media (prefers-color-scheme: dark) {
+    .mobile-avatar {
+        border-color: #90caf9;
+    }
+}
+
+.mobile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+    flex-grow: 1;
+    min-height: 100vh;
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: var(--shadow-light);
+    border-right: 1px solid var(--border-color);
+    font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.account-name{
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode sidebar */
+@media (prefers-color-scheme: dark) {
+    .sidebar {
+        background: var(--sidebar-bg);
+        color: var(--text-primary);
+        border-right: 1px solid var(--border-color);
+        box-shadow: var(--shadow-light);
+    }
+}
+
+.sidebar-logo {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+    font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode sidebar logo */
+@media (prefers-color-scheme: dark) {
+    .sidebar-logo {
+        color: var(--accent-color);
+        border-bottom-color: var(--border-color);
+    }
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0px 15px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-item {
+    margin: 5px 0;
+}
+
+.sidebar-item a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin: 2px 0;
+}
+
+.sidebar-item a svg {
+    margin-right: 10px;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.sidebar-item a:hover {
+    background: var(--accent-color-light);
+    color: var(--accent-color);
+}
+
+.sidebar-item.active a {
+    background: var(--accent-color);
+    color: #fff !important;
+    border-radius: 6px;
+}
+
+.sidebar-item.active a svg {
+    color: #fff !important;
+}
+
+/* Dark mode sidebar items */
+@media (prefers-color-scheme: dark) {
+    .sidebar-item a {
+        color: var(--text-primary);
+    }
+
+    .sidebar-item a svg {
+        color: var(--accent-color);
+    }
+
+    .sidebar-item a:hover {
+        background: var(--accent-color-light);
+        color: var(--accent-color);
+    }
+
+    .sidebar-item.active a {
+        background: var(--accent-color);
+        color: #1e1e1e;
+    }
+
+    .sidebar-item.active a svg {
+        color: #1e1e1e;
+    }
+}
+
+/* Dropdown toggle butonu */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin: 2px 0;
+}
+
+.dropdown-toggle svg {
+    margin-right: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--accent-color);
+}
+
+.arrow svg {
+    margin-right: 0px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background: var(--accent-color-light);
+    color: var(--accent-color);
+}
+
+/* Dark mode dropdown toggle */
+@media (prefers-color-scheme: dark) {
+    .dropdown-toggle {
+        color: var(--text-primary);
+    }
+
+    .dropdown-toggle svg {
+        color: var(--accent-color);
+    }
+
+    .arrow svg {
+        color: var(--text-secondary);
+    }
+
+    .dropdown-toggle:hover {
+        background: var(--accent-color-light);
+        color: var(--accent-color);
+    }
+}
+
+/* Dropdown menü */
+.dropdown-menu {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.dropdown-menu.show {
+    max-height: 200px;
+    /* Açıldığında yüksekliği */
+}
+
+/* Alt menü öğeleri */
+.sidebar-subitem a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    margin: 4px 0px;
+}
+
+.sidebar-subitem a:hover {
+    background: var(--accent-color-light);
+    color: var(--accent-color);
+}
+
+.sidebar-subitem.active a {
+    background: var(--accent-color);
+    color: #fff !important;
+    border-radius: 6px;
+}
+
+/* Dark mode subitem */
+@media (prefers-color-scheme: dark) {
+    .sidebar-subitem a {
+        color: var(--text-secondary);
+    }
+
+    .sidebar-subitem a:hover {
+        background: var(--accent-color-light);
+        color: var(--accent-color);
+    }
+
+    .sidebar-subitem.active a {
+        background: var(--accent-color);
+        color: #1e1e1e;
+    }
+}
+
+/* Ok ikonu */
+.arrow {
+    font-size: 0.7rem;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-account-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding: 20px;
+    transition: border-color 0.3s ease;
+}
+
+/* Dark mode account detail */
+@media (prefers-color-scheme: dark) {
+    .sidebar-account-detail {
+        border-top-color: rgba(255, 255, 255, 0.12);
+    }
+}
+
+.account-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50px;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.account-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+/* Dark mode account */
+@media (prefers-color-scheme: dark) {
+    .account-avatar {
+        background: #90caf9;
+        border-color: #90caf9;
+    }
+
+    .account-info {
+        color: rgba(255, 255, 255, 0.87);
+    }
+}
+
+.account-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logOut {
+    width: 35px;
+    display: flex;
+    background: var(--accent-color-light);
+    border-radius: 6px;
+    height: 35px;
+    border: 1px solid var(--border-color);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logOut:hover {
+    background: rgba(25, 118, 210, 0.2);
+    transform: translateY(-1px);
+}
+
+.logOut svg {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+/* Dark mode logout */
+@media (prefers-color-scheme: dark) {
+    .logOut {
+        background: var(--accent-color-light);
+        border-color: var(--border-color);
+    }
+
+    .logOut:hover {
+        background: rgba(144, 202, 249, 0.2);
+    }
+
+    .logOut svg {
+        color: var(--accent-color);
+    }
+}
+
+.logOut a {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .mobile-navbar {
+        display: flex;
+    }
+
+    .mobile-overlay {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        width: 280px;
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-logo {
+        font-size: 1.6rem;
+        margin: 25px 0;
+        padding-bottom: 25px;
+    }
+
+    .sidebar-item a {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    .sidebar-item a svg {
+        margin-right: 15px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .dropdown-toggle {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    .dropdown-toggle svg {
+        margin-right: 15px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .sidebar-subitem a {
+        padding: 12px 20px;
+        font-size: 1rem;
+        margin: 6px 0;
+    }
+
+    .sidebar-account-detail {
+        padding: 25px 20px;
+    }
+
+    .account-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .account-info {
+        margin-left: 12px;
+        font-size: 16px;
+    }
+
+    .logOut {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-wrapper {
+        margin-left: 0;
+        padding-top: 60px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-wrapper {
+        margin-left: 220px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .sidebar-logo {
+        font-size: 1.3rem;
+    }
+
+    .sidebar-item a {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+
+    .dropdown-toggle {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+
+    .sidebar-subitem a {
+        font-size: 0.85rem;
+    }
+}
+
+/* Theme Toggle Styles */
+.theme-toggle-container {
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+    transition: border-color 0.3s ease;
+}
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--accent-color-light);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.theme-toggle-btn svg {
+    margin-right: 10px;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover svg {
+    color: var(--accent-color);
+}
+

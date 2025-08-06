@@ -1,0 +1,44 @@
+/* Dashboard Layout CSS - Theme-aware design */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 240px;
+  flex-grow: 1;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content {
+  padding: 0;
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .main-wrapper {
+    margin-left: 0;
+    padding-top: 60px;
+  }
+  
+  .dashboard-layout {
+    flex-direction: column;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-wrapper {
+    margin-left: 220px;
+  }
+}

@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     host: true, // 0.0.0.0 ile eşdeğer
     port: 5175,
-    allowedHosts: ['.fairops.com.tr'], // fairops.com.tr ve tüm subdomainlere izin ver
+    allowedHosts: ['fuar.fairops.com.tr'], // fairops.com.tr ve tüm subdomainlere izin ver
     proxy: {
       '/api': {
         target: 'https://api.fairops.com.tr',

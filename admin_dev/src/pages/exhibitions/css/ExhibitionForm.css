@@ -1,0 +1,243 @@
+/* Exhibition Form CSS - Fairops Theme */
+.exhibition-form-container {
+  padding: 24px;
+  background-color: var(--bg-primary);
+  min-height: calc(100vh - 60px);
+  transition: background-color 0.3s ease;
+}
+
+.form-header {
+  margin-bottom: 24px;
+}
+
+.back-button {
+  color: var(--text-secondary) !important;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--accent-color) !important;
+  background: var(--accent-color-light) !important;
+}
+
+.form-title-section {
+  margin-bottom: 8px;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.form-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.form-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.exhibition-form .ant-form-item-label > label {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.label-icon {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.form-input {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1) !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.form-input::placeholder {
+  color: var(--text-tertiary) !important;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color-light);
+}
+
+.cancel-button {
+  background: transparent !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-secondary) !important;
+  height: 40px;
+  padding: 0 24px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+  border-color: var(--text-secondary) !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-secondary) !important;
+}
+
+.submit-button {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  height: 40px;
+  padding: 0 24px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.info-section {
+  margin-top: 24px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, var(--accent-color-light), rgba(25, 118, 210, 0.02)) !important;
+  border: 1px solid rgba(25, 118, 210, 0.1) !important;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.info-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.info-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Ant Design Form Validation Overrides */
+.exhibition-form .ant-form-item-has-error .ant-input {
+  border-color: var(--error-color) !important;
+  background-color: rgba(244, 67, 54, 0.05) !important;
+}
+
+.exhibition-form .ant-form-item-has-error .ant-input:focus {
+  border-color: var(--error-color) !important;
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.1) !important;
+}
+
+.exhibition-form .ant-form-item-explain-error {
+  color: var(--error-color) !important;
+  font-size: 0.85rem;
+}
+
+/* Success state */
+.exhibition-form .ant-form-item-has-success .ant-input {
+  border-color: var(--success-color) !important;
+}
+
+.exhibition-form .ant-form-item-has-success .ant-input:focus {
+  border-color: var(--success-color) !important;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .exhibition-form-container {
+    padding: 16px;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-description {
+    font-size: 0.9rem;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .info-title {
+    font-size: 1rem;
+  }
+  
+  .info-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .exhibition-form-container {
+    padding: 20px;
+  }
+  
+  .form-actions {
+    justify-content: center;
+  }
+}

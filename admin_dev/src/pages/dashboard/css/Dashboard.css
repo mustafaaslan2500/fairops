@@ -203,6 +203,7 @@ body.dark-theme .welcome-card .card-icon {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  width: auto!important;
 }
 
 .action-btn:hover {
@@ -277,4 +278,24 @@ body.dark-theme .action-btn.primary:hover {
     margin-right: 0;
     margin-bottom: 12px;
   }
+}
+
+/* Card Actions */
+.card-actions {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color-light);
+}
+
+.card-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }

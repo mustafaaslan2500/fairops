@@ -1,5 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
-import { FiChevronDown, FiChevronUp, FiHome, FiLogOut, FiUsers, FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
+import { 
+    FiChevronDown, 
+    FiChevronUp, 
+    FiHome, 
+    FiLogOut, 
+    FiUsers, 
+    FiMenu, 
+    FiX, 
+    FiMoon, 
+    FiSun,
+    FiCalendar,
+    FiUserCheck,
+    FiFileText,
+    FiSettings,
+    FiActivity,
+    FiBell,
+    FiBarChart
+} from "react-icons/fi";
 import { useState } from "react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { useAuth } from "../../contexts/AuthContext";
@@ -20,11 +37,37 @@ function Sidebar() {
     const menuItems = [
         { path: "/", label: "Dashboard", icon: <FiHome size={20} /> },
         {
-            label: "Users",
-            icon: <FiUsers size={20} />,
+            label: "Fuar/Firma Yönetimi",
+            icon: <FiCalendar size={20} />,
             children: [
-                { path: "/users", label: "All Users" },
-                { path: "/users/add", label: "Add User" },
+                { path: "/exhibitions", label: "Fuar/Firma Listesi" },
+                { path: "/exhibitions/add", label: "Yeni Fuar/Firma Ekle" },
+            ],
+        },
+        {
+            label: "Takip Sistemleri",
+            icon: <FiUserCheck size={20} />,
+            children: [
+                { path: "/participants", label: "Katılımcı Listesi" },
+                { path: "/decorators", label: "Dekoratör Listesi" },
+                { path: "/documents", label: "Belge Takibi" },
+            ],
+        },
+        {
+            label: "Sistem Yönetimi",
+            icon: <FiSettings size={20} />,
+            children: [
+                { path: "/users", label: "Admin Kullanıcıları" },
+                { path: "/users/add", label: "Yeni Admin Ekle" },
+                { path: "/logs", label: "İşlem Kayıtları" },
+            ],
+        },
+        {
+            label: "Bildirimler & Raporlar",
+            icon: <FiBell size={20} />,
+            children: [
+                { path: "/notifications", label: "Bildirim Takibi" },
+                { path: "/reports", label: "Raporlama" },
             ],
         },
     ];

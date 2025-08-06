@@ -1,0 +1,548 @@
+.login-container {
+  width: 100%;
+  min-height: calc(100vh - 0px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  box-sizing: border-box;
+   background-image: radial-gradient(at 50% 50%, #002952f0, hsl(220, 30%, 5%));
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+   background-image: radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%));
+  background-repeat: no-repeat;
+}
+
+
+@media (min-width: 600px) {
+  .login-container {
+    padding: 32px;
+  }
+}
+
+.login-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  margin: auto;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (min-width: 600px) {
+  .login-card {
+    max-width: 450px;
+  }
+}
+
+/* Dark mode card */
+@media (prefers-color-scheme: dark) {
+  .login-card {
+    background: #090b11a6;
+    box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px, hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+.logo-section {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.logo-icon {
+  color: #1976d2;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-icon {
+    color: #90caf9;
+  }
+}
+
+.login-title {
+  color: #1e1e1e;
+  font-size: 1.75rem;
+  font-weight: 500;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  line-height: 1.167;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .login-title {
+    font-size: 2rem;
+  }
+}
+
+/* Dark mode text colors */
+@media (prefers-color-scheme: dark) {
+  .login-title {
+    color: #fff;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-label {
+  color: #1976d2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  margin: 0 0 6px 0;
+  display: block;
+}
+
+/* Dark mode labels */
+@media (prefers-color-scheme: dark) {
+  .form-label {
+    color: #fff;
+  }
+}
+
+.form-input {
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.00938em !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.23) !important;
+  border-radius: 6px !important;
+  height: 40px !important;
+  padding: 10px 12px !important;
+  transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+  box-sizing: border-box !important;
+}
+
+.form-input:hover {
+  border-color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.form-input:focus {
+  border-color: #1976d2 !important;
+  border-width: 2px !important;
+  padding: 9px 11px !important;
+  outline: 0 !important;
+}
+
+.form-input::placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
+  opacity: 1 !important;
+}
+
+/* Password input specific styles */
+.ant-input-password {
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
+}
+
+.ant-input-password .ant-input {
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  padding-right: 40px !important;
+}
+
+.ant-input-password .ant-input-suffix {
+  right: 8px !important;
+}
+
+.ant-input-password .ant-input-password-icon {
+  color: rgba(0, 0, 0, 0.45) !important;
+  font-size: 16px !important;
+}
+
+/* Dark mode inputs */
+@media (prefers-color-scheme: dark) {
+  .form-input {
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.23) !important;
+  }
+
+  .form-input:hover {
+    border-color: rgba(255, 255, 255, 0.87) !important;
+  }
+
+  .form-input:focus {
+    border-color: #90caf9 !important;
+  }
+
+  .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .ant-input-password .ant-input-password-icon {
+    color: rgba(255, 255, 255, 0.45) !important;
+  }
+}
+
+.remember-section {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.remember-checkbox {
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 0.875rem !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.43 !important;
+  letter-spacing: 0.01071em !important;
+}
+
+.remember-checkbox .ant-checkbox {
+  border-color: rgba(0, 0, 0, 0.42) !important;
+  border-radius: 2px !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.remember-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+
+.remember-checkbox .ant-checkbox:hover {
+  background-color: rgba(25, 118, 210, 0.04) !important;
+}
+
+/* Dark mode checkbox */
+@media (prefers-color-scheme: dark) {
+  .remember-checkbox {
+    color: #fff !important;
+  }
+
+  .remember-checkbox .ant-checkbox {
+    border-color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  .remember-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #90caf9 !important;
+    border-color: #90caf9 !important;
+  }
+
+  .remember-checkbox .ant-checkbox:hover {
+    background-color: rgba(144, 202, 249, 0.08) !important;
+  }
+}
+
+.password-input {
+  margin-top: 15px;
+}
+
+.signin-button {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.23) !important;
+  border-radius: 6px !important;
+  min-height: 44px !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.02857em !important;
+  text-transform: none !important;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif !important;
+  padding: 10px 20px !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+  margin-top: 20px;
+}
+
+.signin-button:hover {
+  background-color: #cfcfcf !important;
+  border-color: rgba(0, 0, 0, 0.87) !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+.signin-button:active {
+  background-color: #eeeeee !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Dark mode signin button */
+@media (prefers-color-scheme: dark) {
+  .signin-button {
+    background-color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.23) !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+  }
+
+  .signin-button:hover {
+    background-color: #cfcfcf !important;
+    border-color: rgba(255, 255, 255, 0.87) !important;
+  }
+}
+
+.forgot-password {
+  text-align: center;
+  margin: 0;
+}
+
+.forgot-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  cursor: pointer;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(25, 118, 210, 0.4);
+}
+
+/* Dark mode links */
+@media (prefers-color-scheme: dark) {
+  .forgot-link {
+    color: #90caf9;
+  }
+
+  .forgot-link:hover {
+    text-decoration-color: rgba(144, 202, 249, 0.4);
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.divider::before {
+  margin-right: 16px;
+}
+
+.divider::after {
+  margin-left: 16px;
+}
+
+.divider span {
+  background: transparent;
+  color: inherit;
+}
+
+/* Dark mode divider */
+@media (prefers-color-scheme: dark) {
+  .divider {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .divider::before,
+  .divider::after {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+}
+
+.google-button,
+.facebook-button {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.23) !important;
+  border-radius: 6px !important;
+  min-height: 44px !important;
+  height: auto !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  font-family: "Inter", "Segoe UI", sans-serif !important;
+  padding: 10px 16px !important;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+.google-button:hover,
+.facebook-button:hover {
+  border-color: rgba(0, 0, 0, 0.87) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.google-button .anticon {
+  color: #4285f4;
+  font-size: 20px;
+}
+
+.facebook-button .anticon {
+  color: #1877f2;
+  font-size: 20px;
+}
+
+/* Dark mode social buttons */
+@media (prefers-color-scheme: dark) {
+
+  .google-button,
+  .facebook-button {
+    border: 1px solid rgba(255, 255, 255, 0.23) !important;
+    color: #fff !important;
+  }
+
+  .google-button:hover,
+  .facebook-button:hover {
+    border-color: rgba(255, 255, 255, 0.87) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #fff !important;
+  }
+}
+
+.signup-link {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  margin: 0;
+}
+
+.signup-link a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(25, 118, 210, 0.4);
+}
+
+/* Dark mode signup link */
+@media (prefers-color-scheme: dark) {
+  .signup-link {
+    color: #fff;
+  }
+
+  .signup-link a {
+    color: #90caf9;
+  }
+
+  .signup-link a:hover {
+    text-decoration-color: rgba(144, 202, 249, 0.4);
+  }
+}
+
+/* Ant Design form item overrides */
+.ant-form-item {
+  margin-bottom: 0 !important;
+}
+
+.ant-form-item-explain-error {
+  color: #d32f2f !important;
+  font-size: 0.75rem !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.66 !important;
+  letter-spacing: 0.03333em !important;
+  margin: 4px 0px 0 0px !important;
+}
+
+/* Dark mode error text */
+@media (prefers-color-scheme: dark) {
+  .ant-form-item-explain-error {
+    color: #f44336 !important;
+  }
+}
+
+/* Error message styles */
+.error-message {
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  color: #c62828;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.error-message span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Dark mode error message */
+@media (prefers-color-scheme: dark) {
+  .error-message {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-color: rgba(244, 67, 54, 0.3);
+    color: #ff6b6b;
+  }
+}

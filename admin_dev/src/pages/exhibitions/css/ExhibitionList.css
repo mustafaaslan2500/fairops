@@ -1,0 +1,259 @@
+/* Exhibition List CSS - Fairops Theme */
+.exhibition-list-container {
+  padding: 24px;
+  background-color: var(--bg-primary);
+  min-height: calc(100vh - 60px);
+  transition: background-color 0.3s ease;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.page-title-section {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.page-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.add-button {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  height: 40px;
+  padding: 0 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.search-input .ant-input-search {
+  max-width: 400px;
+}
+
+.search-input .ant-input {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.search-input .ant-input:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1) !important;
+}
+
+.search-input .ant-btn {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: white !important;
+}
+
+.table-section {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.exhibitions-table .ant-table {
+  background: transparent !important;
+}
+
+.exhibitions-table .ant-table-thead > tr > th {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.exhibitions-table .ant-table-tbody > tr > td {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color-light) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.exhibitions-table .ant-table-tbody > tr:hover > td {
+  background: var(--bg-secondary) !important;
+}
+
+.exhibition-name-link {
+  color: var(--accent-color) !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.exhibition-name-link:hover {
+  color: var(--accent-color) !important;
+  text-decoration: underline;
+}
+
+.responsible-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.responsible-email {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.action-btn {
+  border: none !important;
+  box-shadow: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.view-btn {
+  color: var(--accent-color) !important;
+  background: transparent !important;
+}
+
+.view-btn:hover {
+  background: var(--accent-color-light) !important;
+  color: var(--accent-color) !important;
+}
+
+.edit-btn {
+  color: var(--warning-color) !important;
+  background: transparent !important;
+}
+
+.edit-btn:hover {
+  background: rgba(255, 152, 0, 0.1) !important;
+  color: var(--warning-color) !important;
+}
+
+.delete-btn {
+  color: var(--error-color) !important;
+  background: transparent !important;
+}
+
+.delete-btn:hover {
+  background: rgba(244, 67, 54, 0.1) !important;
+  color: var(--error-color) !important;
+}
+
+/* Ant Design overrides for theme */
+.ant-card {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.ant-tag-green {
+  background: rgba(76, 175, 80, 0.1) !important;
+  border-color: var(--success-color) !important;
+  color: var(--success-color) !important;
+}
+
+.ant-tag-red {
+  background: rgba(244, 67, 54, 0.1) !important;
+  border-color: var(--error-color) !important;
+  color: var(--error-color) !important;
+}
+
+.ant-pagination .ant-pagination-item {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-pagination .ant-pagination-item a {
+  color: var(--text-primary) !important;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+
+.ant-pagination .ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination .ant-pagination-next .ant-pagination-item-link {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .exhibition-list-container {
+    padding: 16px;
+  }
+  
+  .page-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .add-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .search-input .ant-input-search {
+    max-width: 100%;
+  }
+  
+  .exhibitions-table .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+    font-size: 0.85rem;
+  }
+  
+  .responsible-name,
+  .responsible-email {
+    font-size: 0.8rem;
+  }
+  
+  .action-btn {
+    width: 28px;
+    height: 28px;
+  }
+}

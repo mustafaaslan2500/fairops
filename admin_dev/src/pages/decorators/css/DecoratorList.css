@@ -1,0 +1,276 @@
+/* Decorator List CSS - Fairops Theme */
+.decorator-list-container {
+  padding: 24px;
+  background-color: var(--bg-primary);
+  min-height: calc(100vh - 60px);
+  transition: background-color 0.3s ease;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.page-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.filters-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-input .ant-input {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.search-input .ant-input:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1) !important;
+}
+
+.search-input .ant-btn {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: white !important;
+}
+
+.exhibition-filter .ant-select-selector {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.exhibition-filter .ant-select-selector:focus,
+.exhibition-filter .ant-select-focused .ant-select-selector {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1) !important;
+}
+
+.table-section {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.decorators-table .ant-table {
+  background: transparent !important;
+}
+
+.decorators-table .ant-table-thead > tr > th {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.decorators-table .ant-table-tbody > tr > td {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color-light) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.decorators-table .ant-table-tbody > tr:hover > td {
+  background: var(--bg-secondary) !important;
+}
+
+.decorator-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.decorator-icon {
+  color: var(--warning-color);
+  font-size: 1rem;
+}
+
+.exhibition-link {
+  color: var(--accent-color) !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.exhibition-link:hover {
+  color: var(--accent-color) !important;
+  text-decoration: underline;
+}
+
+.participants-list {
+  max-width: 200px;
+}
+
+.participants-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.participant-name {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 2px 6px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.more-participants {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.no-participants {
+  color: var(--text-tertiary);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.action-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.view-btn {
+  color: var(--accent-color);
+}
+
+.view-btn:hover {
+  background: var(--accent-color-light);
+  color: var(--accent-color);
+}
+
+/* Status tag overrides */
+.ant-tag-blue {
+  background: rgba(25, 118, 210, 0.1) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--accent-color) !important;
+}
+
+.ant-tag-orange {
+  background: rgba(255, 152, 0, 0.1) !important;
+  border-color: var(--warning-color) !important;
+  color: var(--warning-color) !important;
+}
+
+.ant-tag-green {
+  background: rgba(76, 175, 80, 0.1) !important;
+  border-color: var(--success-color) !important;
+  color: var(--success-color) !important;
+}
+
+/* Ant Design overrides */
+.ant-card {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.ant-pagination .ant-pagination-item {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-pagination .ant-pagination-item a {
+  color: var(--text-primary) !important;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+
+.ant-pagination .ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination .ant-pagination-next .ant-pagination-item-link {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .decorator-list-container {
+    padding: 16px;
+  }
+  
+  .filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input {
+    max-width: 100%;
+  }
+  
+  .exhibition-filter {
+    width: 100% !important;
+  }
+  
+  .decorators-table .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+    font-size: 0.85rem;
+  }
+  
+  .decorator-name {
+    font-size: 0.9rem;
+  }
+  
+  .participants-list {
+    max-width: 150px;
+  }
+  
+  .participant-name {
+    font-size: 0.75rem;
+  }
+}

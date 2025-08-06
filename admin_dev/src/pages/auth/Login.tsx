@@ -52,7 +52,7 @@ const Login = () => {
       // Test için: bu satırı kullanmayın
       // const accessToken = await GoogleAuth.getTestToken();
       
-      console.log("Google access token alındı:", accessToken);
+      console.log("Google access token alındı -:", accessToken);
       console.log("🔥 CURL TEST KOMUTU (PowerShell):");
       console.log(`curl.exe -X POST "https://api.fairops.com.tr/admin/google-login" -H "Content-Type: application/json" -H "Cookie: PHPSESSID=899fdb0e16c48fb77f2e0a26e61e0c69" -d '{"access_token": "${accessToken}"}'`);
       console.log("🔥 TOKEN:", accessToken);
